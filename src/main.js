@@ -1,4 +1,5 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { defineCustomElement } from 'vue'
+import App from './App.ce.vue'
 
-createApp(App).mount('#app')
+const weatherComponent = defineCustomElement(App)
+customElements.define('weather-app', weatherComponent)
